@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/dashboard_frag">
+    <fragment
+        android:id="@+id/dashboard_frag"
+        android:name="vamsee.application.studytube.Dashboard_frag"
+        android:label="fragment_dashboard_frag"
+        tools:layout="@layout/fragment_dashboard_frag" >
+        <action
+            android:id="@+id/go_to_profile_frag"
+            app:destination="@id/profile_frag"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:popEnterAnim="@anim/fui_slide_in_right" />
+        <action
+            android:id="@+id/action_dashboard_frag_to_explore_frag"
+            app:destination="@id/explore_frag"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/explore_frag"
+        android:name="vamsee.application.studytube.explore_frag"
+        android:label="fragment_explore_frag"
+        tools:layout="@layout/fragment_explore_frag" />
+    <fragment
+        android:id="@+id/wishlist_frag"
+        android:name="vamsee.application.studytube.Wishlist_frag"
+        android:label="fragment_wishlist_frag"
+        tools:layout="@layout/fragment_wishlist_frag" />
+    <fragment
+        android:id="@+id/profile_frag"
+        android:name="vamsee.application.studytube.Profile_frag"
+        android:label="fragment_profile_frag"
+        tools:layout="@layout/fragment_profile_frag" />
+    <fragment
+        android:id="@+id/userVideos_frag"
+        android:name="vamsee.application.studytube.userVideos_frag"
+        android:label="fragment_user_videos"
+        tools:layout="@layout/fragment_user_videos" />
+    <activity
+        android:id="@+id/uploadvid"
+        android:name="vamsee.application.studytube.Uploadvid"
+        android:label="activity_uploadvid"
+        tools:layout="@layout/activity_uploadvid" />
+</navigation>
